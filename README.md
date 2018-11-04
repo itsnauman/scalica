@@ -1,1 +1,6 @@
-# scalica_hashtag
+# Scalica Hashtag
+
+### Project Proposal
+
+
+### Team Members
