@@ -4,9 +4,9 @@ import grpc
 import hashtag_pb2 as hashtag__pb2
 
 
-class GreeterStub(object):
-  """The greeting service definition.
-  """
+class HashtagsStub(object):
+  # missing associated documentation comment in .proto file
+  pass
 
   def __init__(self, channel):
     """Constructor.
@@ -14,30 +14,42 @@ class GreeterStub(object):
     Args:
       channel: A grpc.Channel.
     """
-    self.SayHello = channel.unary_unary(
-        '/Greeter/SayHello',
-        request_serializer=hashtag__pb2.HelloRequest.SerializeToString,
-        response_deserializer=hashtag__pb2.HelloReply.FromString,
+    self.sendTweet = channel.unary_unary(
+        '/Hashtags/sendTweet',
+        request_serializer=hashtag__pb2.TweetRequest.SerializeToString,
+        response_deserializer=hashtag__pb2.Empty.FromString,
         )
-    self.SayHelloAgain = channel.unary_unary(
-        '/Greeter/SayHelloAgain',
-        request_serializer=hashtag__pb2.HelloRequest.SerializeToString,
-        response_deserializer=hashtag__pb2.HelloReply.FromString,
+    self.getTweetsByHashtag = channel.unary_unary(
+        '/Hashtags/getTweetsByHashtag',
+        request_serializer=hashtag__pb2.TweetHashtagRequest.SerializeToString,
+        response_deserializer=hashtag__pb2.TweetsList.FromString,
+        )
+    self.getTweetSentiment = channel.unary_unary(
+        '/Hashtags/getTweetSentiment',
+        request_serializer=hashtag__pb2.TweetHashtagRequest.SerializeToString,
+        response_deserializer=hashtag__pb2.TweetSentiment.FromString,
         )
 
 
-class GreeterServicer(object):
-  """The greeting service definition.
-  """
+class HashtagsServicer(object):
+  # missing associated documentation comment in .proto file
+  pass
 
-  def SayHello(self, request, context):
-    """Sends a greeting
-    """
+  def sendTweet(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def SayHelloAgain(self, request, context):
+  def getTweetsByHashtag(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def getTweetSentiment(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -45,19 +57,24 @@ class GreeterServicer(object):
     raise NotImplementedError('Method not implemented!')
 
 
-def add_GreeterServicer_to_server(servicer, server):
+def add_HashtagsServicer_to_server(servicer, server):
   rpc_method_handlers = {
-      'SayHello': grpc.unary_unary_rpc_method_handler(
-          servicer.SayHello,
-          request_deserializer=hashtag__pb2.HelloRequest.FromString,
-          response_serializer=hashtag__pb2.HelloReply.SerializeToString,
+      'sendTweet': grpc.unary_unary_rpc_method_handler(
+          servicer.sendTweet,
+          request_deserializer=hashtag__pb2.TweetRequest.FromString,
+          response_serializer=hashtag__pb2.Empty.SerializeToString,
       ),
-      'SayHelloAgain': grpc.unary_unary_rpc_method_handler(
-          servicer.SayHelloAgain,
-          request_deserializer=hashtag__pb2.HelloRequest.FromString,
-          response_serializer=hashtag__pb2.HelloReply.SerializeToString,
+      'getTweetsByHashtag': grpc.unary_unary_rpc_method_handler(
+          servicer.getTweetsByHashtag,
+          request_deserializer=hashtag__pb2.TweetHashtagRequest.FromString,
+          response_serializer=hashtag__pb2.TweetsList.SerializeToString,
+      ),
+      'getTweetSentiment': grpc.unary_unary_rpc_method_handler(
+          servicer.getTweetSentiment,
+          request_deserializer=hashtag__pb2.TweetHashtagRequest.FromString,
+          response_serializer=hashtag__pb2.TweetSentiment.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'Greeter', rpc_method_handlers)
+      'Hashtags', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))

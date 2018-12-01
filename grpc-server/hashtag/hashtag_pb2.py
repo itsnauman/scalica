@@ -19,26 +19,45 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\rhashtag.proto\"\x1c\n\x0cHelloRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"\x1d\n\nHelloReply\x12\x0f\n\x07message\x18\x01 \x01(\t2b\n\x07Greeter\x12(\n\x08SayHello\x12\r.HelloRequest\x1a\x0b.HelloReply\"\x00\x12-\n\rSayHelloAgain\x12\r.HelloRequest\x1a\x0b.HelloReply\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\rhashtag.proto\"\x07\n\x05\x45mpty\"/\n\x0cTweetRequest\x12\r\n\x05tweet\x18\x01 \x01(\t\x12\x10\n\x08tweet_id\x18\x02 \x01(\x05\"&\n\x13TweetHashtagRequest\x12\x0f\n\x07hashtag\x18\x01 \x01(\t\"-\n\nTweetsList\x12\x0f\n\x07hashtag\x18\x01 \x01(\t\x12\x0e\n\x06tweets\x18\x02 \x03(\t\"v\n\x0eTweetSentiment\x12-\n\tsentiment\x18\x01 \x01(\x0e\x32\x1a.TweetSentiment.Sentiments\"5\n\nSentiments\x12\x0c\n\x08POSITIVE\x10\x00\x12\x0c\n\x08NEGATIVE\x10\x01\x12\x0b\n\x07NEUTRAL\x10\x02\x32\xa9\x01\n\x08Hashtags\x12$\n\tsendTweet\x12\r.TweetRequest\x1a\x06.Empty\"\x00\x12\x39\n\x12getTweetsByHashtag\x12\x14.TweetHashtagRequest\x1a\x0b.TweetsList\"\x00\x12<\n\x11getTweetSentiment\x12\x14.TweetHashtagRequest\x1a\x0f.TweetSentiment\"\x00\x62\x06proto3')
 )
 
 
 
+_TWEETSENTIMENT_SENTIMENTS = _descriptor.EnumDescriptor(
+  name='Sentiments',
+  full_name='TweetSentiment.Sentiments',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='POSITIVE', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='NEGATIVE', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='NEUTRAL', index=2, number=2,
+      serialized_options=None,
+      type=None),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=227,
+  serialized_end=280,
+)
+_sym_db.RegisterEnumDescriptor(_TWEETSENTIMENT_SENTIMENTS)
 
-_HELLOREQUEST = _descriptor.Descriptor(
-  name='HelloRequest',
-  full_name='HelloRequest',
+
+_EMPTY = _descriptor.Descriptor(
+  name='Empty',
+  full_name='Empty',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
-    _descriptor.FieldDescriptor(
-      name='name', full_name='HelloRequest.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -52,19 +71,57 @@ _HELLOREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=17,
-  serialized_end=45,
+  serialized_end=24,
 )
 
 
-_HELLOREPLY = _descriptor.Descriptor(
-  name='HelloReply',
-  full_name='HelloReply',
+_TWEETREQUEST = _descriptor.Descriptor(
+  name='TweetRequest',
+  full_name='TweetRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='message', full_name='HelloReply.message', index=0,
+      name='tweet', full_name='TweetRequest.tweet', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='tweet_id', full_name='TweetRequest.tweet_id', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=26,
+  serialized_end=73,
+)
+
+
+_TWEETHASHTAGREQUEST = _descriptor.Descriptor(
+  name='TweetHashtagRequest',
+  full_name='TweetHashtagRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='hashtag', full_name='TweetHashtagRequest.hashtag', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -82,60 +139,165 @@ _HELLOREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=47,
-  serialized_end=76,
+  serialized_start=75,
+  serialized_end=113,
 )
 
-DESCRIPTOR.message_types_by_name['HelloRequest'] = _HELLOREQUEST
-DESCRIPTOR.message_types_by_name['HelloReply'] = _HELLOREPLY
+
+_TWEETSLIST = _descriptor.Descriptor(
+  name='TweetsList',
+  full_name='TweetsList',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='hashtag', full_name='TweetsList.hashtag', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='tweets', full_name='TweetsList.tweets', index=1,
+      number=2, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=115,
+  serialized_end=160,
+)
+
+
+_TWEETSENTIMENT = _descriptor.Descriptor(
+  name='TweetSentiment',
+  full_name='TweetSentiment',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='sentiment', full_name='TweetSentiment.sentiment', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _TWEETSENTIMENT_SENTIMENTS,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=162,
+  serialized_end=280,
+)
+
+_TWEETSENTIMENT.fields_by_name['sentiment'].enum_type = _TWEETSENTIMENT_SENTIMENTS
+_TWEETSENTIMENT_SENTIMENTS.containing_type = _TWEETSENTIMENT
+DESCRIPTOR.message_types_by_name['Empty'] = _EMPTY
+DESCRIPTOR.message_types_by_name['TweetRequest'] = _TWEETREQUEST
+DESCRIPTOR.message_types_by_name['TweetHashtagRequest'] = _TWEETHASHTAGREQUEST
+DESCRIPTOR.message_types_by_name['TweetsList'] = _TWEETSLIST
+DESCRIPTOR.message_types_by_name['TweetSentiment'] = _TWEETSENTIMENT
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
-HelloRequest = _reflection.GeneratedProtocolMessageType('HelloRequest', (_message.Message,), dict(
-  DESCRIPTOR = _HELLOREQUEST,
+Empty = _reflection.GeneratedProtocolMessageType('Empty', (_message.Message,), dict(
+  DESCRIPTOR = _EMPTY,
   __module__ = 'hashtag_pb2'
-  # @@protoc_insertion_point(class_scope:HelloRequest)
+  # @@protoc_insertion_point(class_scope:Empty)
   ))
-_sym_db.RegisterMessage(HelloRequest)
+_sym_db.RegisterMessage(Empty)
 
-HelloReply = _reflection.GeneratedProtocolMessageType('HelloReply', (_message.Message,), dict(
-  DESCRIPTOR = _HELLOREPLY,
+TweetRequest = _reflection.GeneratedProtocolMessageType('TweetRequest', (_message.Message,), dict(
+  DESCRIPTOR = _TWEETREQUEST,
   __module__ = 'hashtag_pb2'
-  # @@protoc_insertion_point(class_scope:HelloReply)
+  # @@protoc_insertion_point(class_scope:TweetRequest)
   ))
-_sym_db.RegisterMessage(HelloReply)
+_sym_db.RegisterMessage(TweetRequest)
+
+TweetHashtagRequest = _reflection.GeneratedProtocolMessageType('TweetHashtagRequest', (_message.Message,), dict(
+  DESCRIPTOR = _TWEETHASHTAGREQUEST,
+  __module__ = 'hashtag_pb2'
+  # @@protoc_insertion_point(class_scope:TweetHashtagRequest)
+  ))
+_sym_db.RegisterMessage(TweetHashtagRequest)
+
+TweetsList = _reflection.GeneratedProtocolMessageType('TweetsList', (_message.Message,), dict(
+  DESCRIPTOR = _TWEETSLIST,
+  __module__ = 'hashtag_pb2'
+  # @@protoc_insertion_point(class_scope:TweetsList)
+  ))
+_sym_db.RegisterMessage(TweetsList)
+
+TweetSentiment = _reflection.GeneratedProtocolMessageType('TweetSentiment', (_message.Message,), dict(
+  DESCRIPTOR = _TWEETSENTIMENT,
+  __module__ = 'hashtag_pb2'
+  # @@protoc_insertion_point(class_scope:TweetSentiment)
+  ))
+_sym_db.RegisterMessage(TweetSentiment)
 
 
 
-_GREETER = _descriptor.ServiceDescriptor(
-  name='Greeter',
-  full_name='Greeter',
+_HASHTAGS = _descriptor.ServiceDescriptor(
+  name='Hashtags',
+  full_name='Hashtags',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=78,
-  serialized_end=176,
+  serialized_start=283,
+  serialized_end=452,
   methods=[
   _descriptor.MethodDescriptor(
-    name='SayHello',
-    full_name='Greeter.SayHello',
+    name='sendTweet',
+    full_name='Hashtags.sendTweet',
     index=0,
     containing_service=None,
-    input_type=_HELLOREQUEST,
-    output_type=_HELLOREPLY,
+    input_type=_TWEETREQUEST,
+    output_type=_EMPTY,
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='SayHelloAgain',
-    full_name='Greeter.SayHelloAgain',
+    name='getTweetsByHashtag',
+    full_name='Hashtags.getTweetsByHashtag',
     index=1,
     containing_service=None,
-    input_type=_HELLOREQUEST,
-    output_type=_HELLOREPLY,
+    input_type=_TWEETHASHTAGREQUEST,
+    output_type=_TWEETSLIST,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='getTweetSentiment',
+    full_name='Hashtags.getTweetSentiment',
+    index=2,
+    containing_service=None,
+    input_type=_TWEETHASHTAGREQUEST,
+    output_type=_TWEETSENTIMENT,
     serialized_options=None,
   ),
 ])
-_sym_db.RegisterServiceDescriptor(_GREETER)
+_sym_db.RegisterServiceDescriptor(_HASHTAGS)
 
-DESCRIPTOR.services_by_name['Greeter'] = _GREETER
+DESCRIPTOR.services_by_name['Hashtags'] = _HASHTAGS
 
 # @@protoc_insertion_point(module_scope)
