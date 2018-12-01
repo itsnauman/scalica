@@ -7,6 +7,7 @@ import hashtag_pb2
 import hashtag_pb2_grpc
 
 import redis
+
 r = redis.Redis(host='localhost', port=6379, db=0)
 
 _ONE_DAY_IN_SECONDS = 60 * 60 * 24
@@ -14,16 +15,22 @@ _ONE_DAY_IN_SECONDS = 60 * 60 * 24
 
 class HashtagService(hashtag_pb2_grpc.HashtagsServicer):
     def getTweetsByHashtag(self, request, context):
-        hashtag = request.hashtag
-        print(hashtag)
-        return hashtag_pb2.TweetsList(hashtag="#Hello", tweets=['#Hello world'])
+        hashtag = request.hashtag.lower()
+        tweet_ids = r.lrange(hashtag, 0, -1)
+        return hashtag_pb2.TweetsList(hashtag=hashtag, tweets=tweet_ids)
 
-    # def SayHello(self, request, context):
-    #     r.set('foo', 'bar')
-    #     return hashtag_pb2.HelloReply(message='Hello, %s!' % request.name)
+    def sendTweet(self, request, context):
+        tags = request.tweet
+        tweet_id = request.tweet_id
 
-    # def SayHelloAgain(self, request, context):
-    #     return hashtag_pb2.HelloReply(message=r.get('dp'))
+        # Strip hashtags from tweet
+        hashtags = list({tag.strip("").lower() for tag in tags.split() if tag.startswith("#")})
+
+        # Add hashtag as key and tweet id as value in redis
+        for tag in hashtags:
+            r.rpush(tag, tweet_id)
+
+        return hashtag_pb2.Empty()
 
 
 def serve():
