@@ -105,7 +105,9 @@ DATABASES = {
     'ENGINE': 'django.db.backends.mysql',
     'NAME': 'scalica',
     'USER': 'scalica_app',
-    'PASSWORD': 'scalica_app123'
+    'PASSWORD': 'scalica_app123', 
+    'HOST': '35.243.246.78',
+    'PORT': '3306'
     #'OPTIONS': {
     #  'read_default_file': os.path.join(BASE_DIR, '..', '..', 'db', 'my.cnf'),
     # },
