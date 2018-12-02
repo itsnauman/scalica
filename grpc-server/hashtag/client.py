@@ -10,9 +10,9 @@ def run():
     with grpc.insecure_channel('127.0.0.1:50051') as channel:
         stub =  hashtag_pb2_grpc.HashtagsStub(channel)
 
-        stub.sendTweet(TweetRequest(tweet="I love #apple #ipad", tweet_id=2))
+        stub.sendTweet(TweetRequest(tweet="#aps #sucks", tweet_id=2))
 
-        response = stub.getTweetsByHashtag(hashtag_pb2.TweetHashtagRequest(hashtag='#apple'))
+        response = stub.getTweetsByHashtag(hashtag_pb2.TweetHashtagRequest(hashtag='#aps'))
         print(response.tweets)
 
 if __name__ == '__main__':

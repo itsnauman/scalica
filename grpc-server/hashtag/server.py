@@ -14,9 +14,14 @@ _ONE_DAY_IN_SECONDS = 60 * 60 * 24
 
 
 class HashtagService(hashtag_pb2_grpc.HashtagsServicer):
+    def __init__(self):
+        super().__init__()
+        self.fp = open('tweets_dump.txt', 'a+')
+
     def getTweetsByHashtag(self, request, context):
         hashtag = request.hashtag.lower()
         tweet_ids = r.lrange(hashtag, 0, -1)
+
         return hashtag_pb2.TweetsList(hashtag=hashtag, tweets=tweet_ids)
 
     def sendTweet(self, request, context):
@@ -30,7 +35,17 @@ class HashtagService(hashtag_pb2_grpc.HashtagsServicer):
         for tag in hashtags:
             r.rpush(tag, tweet_id)
 
+        # Dump tweets to a file
+        self.fp.write(tags + '\n')
+        self.fp.flush()
+
         return hashtag_pb2.Empty()
+
+    def getTweetSentiment(self, request, context):
+        return hashtag_pb2.TweetSentiment()
+
+    def __del__(self):
+        self.fp.close()
 
 
 def serve():
