@@ -12,3 +12,11 @@ urlpatterns = [
     url(r'^register/$', views.register, name='register'),
     url('^', include('django.contrib.auth.urls'))
 ]
+
+
+'''Mir
+Need to create following view(s):
+1. A view that will allow a user to search for posts for a
+given topic/hashtag. For each post in the view, it should also
+display the sentiment type of that post.
+'''
