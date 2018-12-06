@@ -78,10 +78,10 @@ def stream_hashtag_with_sentiment(request):
     # render all the tweets
     hashtag = request.GET['hashtag']
 
-    with grpc.insecure_channel('localhost:5001') as channel:
+    with grpc.insecure_channel('35.227.41.202:5001') as channel:
       stub = HashtagsStub(channel)
-      tweet_ids = stub.getTweetsByHashtag(TweetHashtagRequest(hashtag))
-      sentiment = stub.getTweetSentiment(TweetHashtagRequest(hashtag))
+      tweet_ids = stub.getTweetsByHashtag(TweetHashtagRequest(hashtag=hashtag))
+      sentiment = stub.getTweetSentiment(TweetHashtagRequest(hashtag=hashtag))
 
     # get all the tweets from datbase and render
     tweets = Post.objects.filter(id__in=tweet_ids) # may need to cast tweet_ids to python list
@@ -121,10 +121,10 @@ def post(request):
     # make an rpc call to send the tweet id and the text
     post_id = new_post.id
     text = new_post.text
-    channel = grpc.insecure_channel('localhost:5001')
+    channel = grpc.insecure_channel('35.227.41.202:5001')
     stub = HashtagsStub(channel)
-    stub.sendTweet(TweetRequest(text, post_id))
-    
+    stub.sendTweet(TweetRequest(tweet=text, tweet_id=post_id))
+    channel.close()	   
     return home(request)
   else:
     form = PostForm
