@@ -7,6 +7,10 @@ from django.shortcuts import render
 from django.utils import timezone
 from .models import Following, Post, FollowingForm, PostForm, MyUserCreationForm
 
+# imports for rpc client calls
+import grpc
+from hashtag_pb2 import *
+from hashtag_pb2_grpc import *
 
 # Anonymous views
 #################
@@ -47,6 +51,8 @@ def stream(request, user_id):
   }
   return render(request, 'micro/stream.html', context)
 
+
+
 def register(request):
   if request.method == 'POST':
     form = MyUserCreationForm(request.POST)
@@ -62,6 +68,25 @@ def register(request):
   else:
     form = MyUserCreationForm
   return render(request, 'micro/register.html', {'form' : form})
+
+
+def stream_hashtag_with_sentiment(request):
+  if request.method == 'GET':
+    # get the hashtag from the request
+    # send an rpc call to get all the tweet ids and the sentiment 
+    # associated with the hashtag
+    # render all the tweets
+    hashtag = request.GET['hashtag']
+
+    with grpc.insecure_channel('localhost:5001') as channel:
+      stub = HashtagsStub(channel)
+      tweet_ids = stub.getTweetsByHashtag(TweetHashtagRequest(hashtag))
+      sentiment = stub.getTweetSentiment(TweetHashtagRequest(hashtag))
+
+    # get all the tweets from datbase and render
+    tweets = Post.objects.filter(id__in=tweet_ids) # may need to cast tweet_ids to python list
+    return render(request, 'micro/hashtag_search_with_sentiment.html', {'posts':tweets, 'sentiment': sentiment, 'hashtag': hashtag})
+
 
 # Authenticated views
 #####################
@@ -92,6 +117,14 @@ def post(request):
     new_post.user = request.user
     new_post.pub_date = timezone.now()
     new_post.save()
+    # get the post id
+    # make an rpc call to send the tweet id and the text
+    post_id = new_post.id
+    text = new_post.text
+    channel = grpc.insecure_channel('localhost:5001')
+    stub = HashtagsStub(channel)
+    stub.sendTweet(TweetRequest(text, post_id))
+    
     return home(request)
   else:
     form = PostForm
@@ -109,3 +142,11 @@ def follow(request):
   else:
     form = FollowingForm
   return render(request, 'micro/follow.html', {'form' : form})
+
+
+
+    
+
+
+
+

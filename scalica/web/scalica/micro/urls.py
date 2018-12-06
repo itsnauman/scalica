@@ -10,6 +10,7 @@ urlpatterns = [
     url(r'^post/$', views.post, name='post'),
     url(r'^follow/$', views.follow, name='follow'),
     url(r'^register/$', views.register, name='register'),
+    url(r'^stream_hashtag_tweets/(?P<hashtag>)/$', views.stream_hashtag_with_sentiment, name='hashtag_sentiment'),
     url('^', include('django.contrib.auth.urls'))
 ]
 
