@@ -7,6 +7,9 @@ from django.shortcuts import render
 from django.utils import timezone
 from .models import Following, Post, FollowingForm, PostForm, MyUserCreationForm
 
+# dev imports
+#from future import print_function
+
 # imports for rpc client calls
 import grpc
 from hashtag_pb2 import *
@@ -78,7 +81,7 @@ def stream_hashtag_with_sentiment(request):
     # render all the tweets
     hashtag = request.GET['hashtag']
 
-    with grpc.insecure_channel('35.227.41.202:5001') as channel:
+    with grpc.insecure_channel('35.227.41.202:50051') as channel:
       stub = HashtagsStub(channel)
       tweet_ids = stub.getTweetsByHashtag(TweetHashtagRequest(hashtag=hashtag))
       sentiment = stub.getTweetSentiment(TweetHashtagRequest(hashtag=hashtag))
@@ -121,7 +124,7 @@ def post(request):
     # make an rpc call to send the tweet id and the text
     post_id = new_post.id
     text = new_post.text
-    channel = grpc.insecure_channel('35.227.41.202:5001')
+    channel = grpc.insecure_channel('35.227.41.202:50051')
     stub = HashtagsStub(channel)
     stub.sendTweet(TweetRequest(tweet=text, tweet_id=post_id))
     channel.close()	   
