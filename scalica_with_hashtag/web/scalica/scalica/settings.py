@@ -106,7 +106,7 @@ DATABASES = {
     'USER': 'scalica_app',
     'PASSWORD': 'scalica_app123',
     'PORT': '3306',
-    'HOST':'35.185.33.105'
+    'HOST':'10.142.0.3'
     #'OPTIONS': {
      # 'read_default_file': os.path.join(BASE_DIR, '..', 'depot', 'db', 'my.cnf'),
     #},
