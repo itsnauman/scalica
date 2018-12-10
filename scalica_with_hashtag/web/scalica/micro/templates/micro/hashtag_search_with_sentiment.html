@@ -21,5 +21,23 @@
     {{ post.text }} ({{ post.pub_date|naturaltime }})
   </li>
 {% endfor %}
-{# TODO: see complete pagination example in Django doc for more #}
+
+
+<div class="pagination">
+    <span class="step-links">
+        {% if posts.has_previous %}
+            <a class='btn btn-danger' href="?page=1">&laquo; first</a>
+            <a class='btn btn-danger'href="?page={{ posts.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ posts.number }} of {{ posts.paginator.num_pages }}.
+        </span>
+
+        {% if posts.has_next %}
+            <a class='btn btn-danger'href="?page={{ posts.next_page_number }}">next</a>
+            <a class='btn btn-danger'href="?page={{ posts.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
 {% endblock %}
