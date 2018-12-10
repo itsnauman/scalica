@@ -5,15 +5,18 @@ def map_hashtags(post):
     for word in post.split():
         if word[0] == "#":
             hashtags.append(word)
+
     document = language.types.Document(
         content=post,
         type=language.enums.Document.Type.PLAIN_TEXT,
     )
+
     client = language.LanguageServiceClient()
     full_sentiment = client.analyze_sentiment(document=document).document_sentiment
     score = full_sentiment.score
     magnitude = full_sentiment.magnitude
     ret_list = []
+    
     for hashtag in hashtags:
         ret_list.append((hashtag, (score, magnitude, 1)))
     return ret_list

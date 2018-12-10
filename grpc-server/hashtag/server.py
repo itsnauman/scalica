@@ -8,7 +8,7 @@ import hashtag_pb2_grpc
 
 import redis
 
-r = redis.Redis(host='localhost', port=6379, db=0)
+r = redis.Redis(host='35.185.58.180', port=6379, db=0, charset="utf-8", decode_responses=True))
 
 _ONE_DAY_IN_SECONDS = 60 * 60 * 24
 
@@ -42,7 +42,15 @@ class HashtagService(hashtag_pb2_grpc.HashtagsServicer):
         return hashtag_pb2.Empty()
 
     def getTweetSentiment(self, request, context):
-        return hashtag_pb2.TweetSentiment()
+        sentiment_key = '@score@' + request.hashtag
+        sentiment = r.get(sentiment_key)
+
+        if sentiment < 0:
+            return hashtag_pb2.TweetSentiment(sentiment=hashtag_pb2.TweetSentiment.NEGATIVE)
+        elif sentiment > 0:
+            return hashtag_pb2.TweetSentiment(sentiment=hashtag_pb2.TweetSentiment.POSITIVE)
+            
+        return hashtag_pb2.TweetSentiment(sentiment=hashtag_pb2.TweetSentiment.NEUTRAL)
 
     def __del__(self):
         self.fp.close()

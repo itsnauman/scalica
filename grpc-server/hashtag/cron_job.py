@@ -4,22 +4,23 @@ from sentiment import map_hashtags, reduce_hashtags, take_avg
 from pyspark import SparkContext
 import redis
 
-r = redis.Redis(host='localhost', port=6379, db=0)
+r = redis.Redis(host='35.185.58.180', port=6379, db=0)
 sc = SparkContext()
 
 
 def job():
-    textfile = sc.textFile("hashtags.txt")
+    textfile = sc.textFile("tweets_dump.txt")
     result = textfile.flatMap(map_hashtags)\
                      .reduceByKey(reduce_hashtags)\
                      .map(take_avg)
 
     for hashtag, (sentiment_score, sentiment_magnitude) in result.collect():
-        r.rpush("hashtag_sentiment_score:" + hashtag, sentiment_score)
-        r.rpush("hashtag_sentiment_magnitude:" + hashtag, sentiment_magnitude)
+        r.set("@score@" + hashtag, sentiment_score)
 
-schedule.every(30).minutes.do(job)
+job()
 
-while True:
-    schedule.run_pending()
-    time.sleep(1)
+#schedule.every(30).minutes.do(job)
+
+#while True:
+    #schedule.run_pending()
+    #time.sleep(1)
