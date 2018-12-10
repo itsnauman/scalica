@@ -6,7 +6,7 @@ from pyspark import SparkContext
 def job():
     sc = SparkContext()
     textfile = sc.textFile("hashtags.txt")
-    result = textfile.map(map_hashtags)\
+    result = textfile.flatMap(map_hashtags)\
                      .reduceByKey(reduce_hashtags)\
                      .map(take_avg)
 

@@ -1,16 +1,22 @@
 from google.cloud import language
 
-def map_hashtags(line):
-    hashtag = line[1:line.index(":")]
+def map_hashtags(post):
+    hashtags = []
+    for word in post.split():
+        if word[0] == "#":
+            hashtags.append(word)
     document = language.types.Document(
-        content=line[line.index(":")+1:],
+        content=post,
         type=language.enums.Document.Type.PLAIN_TEXT,
     )
     client = language.LanguageServiceClient()
     full_sentiment = client.analyze_sentiment(document=document).document_sentiment
     score = full_sentiment.score
     magnitude = full_sentiment.magnitude
-    return (hashtag, (score, magnitude, 1))
+    ret_list = []
+    for hashtag in hashtags:
+        ret_list.append((hashtag, (score, magnitude, 1)))
+    return ret_list
 
 def reduce_hashtags(sentiment1, sentiment2):
     return (sentiment1[0] + sentiment2[0], sentiment1[1] + sentiment2[1], sentiment1[2] + sentiment2[2])
