@@ -29,7 +29,7 @@ class HashtagService(hashtag_pb2_grpc.HashtagsServicer):
         tweet_id = request.tweet_id
 
         # Strip hashtags from tweet
-        hashtags = list({tag.strip("").lower() for tag in tags.split() if tag.startswith("#")})
+        hashtags = [i.lower() for i in s.split() if i.startswith("#")]
 
         # Add hashtag as key and tweet id as value in redis
         for tag in hashtags:
