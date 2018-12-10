@@ -4,7 +4,7 @@ from sentiment import map_hashtags, reduce_hashtags, take_avg
 from pyspark import SparkContext
 import redis
 
-r = redis.Redis(host='35.185.58.180', port=6379, db=0)
+r = redis.Redis(host='35.243.217.152', port=6379, db=0)
 sc = SparkContext()
 
 

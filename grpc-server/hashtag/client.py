@@ -10,11 +10,11 @@ def run():
     with grpc.insecure_channel('35.185.58.180:50051') as channel:
         stub =  hashtag_pb2_grpc.HashtagsStub(channel)
 
-        stub.sendTweet(TweetRequest(tweet="#Hello hello hello", tweet_id=1))
-        stub.sendTweet(TweetRequest(tweet="#Large scale demo demo", tweet_id=2))
-        stub.sendTweet(TweetRequest(tweet="#Andrew dsdsd sd sd sdsd", tweet_id=3))
+        stub.sendTweet(TweetRequest(tweet="I am very #happy and #excited today", tweet_id=1))
+        stub.sendTweet(TweetRequest(tweet="I don't know what the fuck Im saying #neutral", tweet_id=2))
+        stub.sendTweet(TweetRequest(tweet="Shut up andrew #Andrew. I'm very fucking angry", tweet_id=3))
 
-        response = stub.getTweetsByHashtag(hashtag_pb2.TweetHashtagRequest(hashtag='#Large'))
+        response = stub.getTweetsByHashtag(hashtag_pb2.TweetHashtagRequest(hashtag='#Andrew'))
         print(response.tweets)
 
 if __name__ == '__main__':
