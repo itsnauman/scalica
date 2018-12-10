@@ -77,6 +77,7 @@ def stream_hashtag_with_sentiment(request, hashtag):
     # render all the tweets
     # print "THE HASHTAG IS " + hashtag
     # check of the hashtag has the character '#' and format it the way redis takes it
+    #  hashtag = request.GET.get('hashtag')
     if hashtag[0] != '#':
       hashtag = '#' + hashtag
     tweet_ids = []
@@ -88,7 +89,17 @@ def stream_hashtag_with_sentiment(request, hashtag):
       #sentiment = stub.getTweetSentiment(TweetHashtagRequest(hashtag=hashtag))
       sentiment = "temp"
     # get all the tweets from datbase and render
-    tweets = Post.objects.filter(id__in=tweet_ids) # may need to cast tweet_ids to python list
+    tweet_list = Post.objects.filter(id__in=tweet_ids) # may need to cast tweet_ids to python list
+    #tweet_list = ['hello', 'mir','is','testing','pagination','hope','this','works','and','my','fingers','crossed','tightly']
+    # pagination
+    paginator = Paginator(tweet_list, 5)
+    page = request.GET.get('page')
+    try:
+      tweets = paginator.page(page)
+    except PageNotAnInteger:
+      tweets = paginator.page(1)
+    except EmptyPage:
+      tweets = paginator.get_page(paginator.num_pages)
     return render(request, 'micro/hashtag_search_with_sentiment.html', {'posts':tweets, 'sentiment': sentiment, 'hashtag': hashtag})
 
 
@@ -108,7 +119,8 @@ def home(request):
   context = {
     'post_list': post_list,
     'my_post' : my_post,
-    'post_form' : PostForm
+    'post_form' : PostForm,
+    'hashtag_error': 'Field cannot be empty'
   }
   return render(request, 'micro/home.html', context)
 
