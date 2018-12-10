@@ -51,7 +51,7 @@ class HashtagService(hashtag_pb2_grpc.HashtagsServicer):
         # elif sentiment > 0:
         #     return hashtag_pb2.TweetSentiment(sentiment=hashtag_pb2.TweetSentiment.POSITIVE)
 
-        return hashtag_pb2.TweetSentiment(sentiment=hashtag_pb2.TweetSentiment.NEUTRAL)
+        return hashtag_pb2.TweetSentiment(sentiment="sdsdsdsd")
 
     def __del__(self):
         self.fp.close()
