@@ -1,6 +1,5 @@
 syntax = "proto3";
 
-
 service Hashtags {
     rpc sendTweet (TweetRequest) returns (Empty) {}
     rpc getTweetsByHashtag (TweetHashtagRequest) returns (TweetsList) {}
