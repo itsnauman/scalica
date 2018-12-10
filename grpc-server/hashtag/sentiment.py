@@ -1,13 +1,9 @@
 from google.cloud import language
-from pyspark import SparkContext
-
-sc = SparkContext()
-textfile = sc.textFile("hashtags.txt")
 
 def map_hashtags(line):
     hashtag = line[1:line.index(":")]
     document = language.types.Document(
-        content=line[line.index(":")+1],
+        content=line[line.index(":")+1:],
         type=language.enums.Document.Type.PLAIN_TEXT,
     )
     client = language.LanguageServiceClient()
@@ -23,9 +19,3 @@ def take_avg(hash_with_sentiment):
     hashtag = hash_with_sentiment[0]
     sentiment = hash_with_sentiment[1]
     return hashtag, (sentiment[0] / sentiment[2], sentiment[1] / sentiment[2])
-
-result = textfile.map(map_hashtags)\
-                 .reduceByKey(reduce_hashtags)\
-                 .map(take_avg)
-
-result.saveAsTextFile("results.txt")
