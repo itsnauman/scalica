@@ -1,5 +1,3 @@
-#!/usr/bin/python
-
 import time
 from sentiment import map_hashtags, reduce_hashtags, take_avg
 from pyspark import SparkContext
