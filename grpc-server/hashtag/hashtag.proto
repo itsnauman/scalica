@@ -24,11 +24,5 @@ message TweetsList {
 }
 
 message TweetSentiment {
-    enum Sentiments {
-        POSITIVE = 0;
-        NEGATIVE = 1;
-        NEUTRAL = 2;
-    }
-
-    Sentiments sentiment = 1;
+    string sentiment = 1;
 }
