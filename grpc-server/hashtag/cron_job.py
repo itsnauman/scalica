@@ -19,8 +19,8 @@ def job():
 
 job()
 
-#schedule.every(30).minutes.do(job)
+schedule.every(30).minutes.do(job)
 
-#while True:
-    #schedule.run_pending()
-    #time.sleep(1)
+while True:
+    schedule.run_pending()
+    time.sleep(1)
