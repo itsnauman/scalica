@@ -42,13 +42,14 @@ class HashtagService(hashtag_pb2_grpc.HashtagsServicer):
         return hashtag_pb2.Empty()
 
     def getTweetSentiment(self, request, context):
-        sentiment_key = '@score@' + request.hashtag
-        sentiment = r.get(sentiment_key)
+        print(request.hashtag)
+        # sentiment_key = '@score@' + request.hashtag
+        # sentiment = r.get(sentiment_key)
 
-        if sentiment < 0:
-            return hashtag_pb2.TweetSentiment(sentiment=hashtag_pb2.TweetSentiment.NEGATIVE)
-        elif sentiment > 0:
-            return hashtag_pb2.TweetSentiment(sentiment=hashtag_pb2.TweetSentiment.POSITIVE)
+        # if sentiment < 0:
+        #     return hashtag_pb2.TweetSentiment(sentiment=hashtag_pb2.TweetSentiment.NEGATIVE)
+        # elif sentiment > 0:
+        #     return hashtag_pb2.TweetSentiment(sentiment=hashtag_pb2.TweetSentiment.POSITIVE)
 
         return hashtag_pb2.TweetSentiment(sentiment=hashtag_pb2.TweetSentiment.NEUTRAL)
 
