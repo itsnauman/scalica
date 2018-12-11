@@ -8,7 +8,7 @@ import hashtag_pb2_grpc
 
 import redis
 
-r = redis.Redis(host='35.243.217.152', port=6379, db=0, charset="utf-8", decode_responses=True)
+r = redis.Redis(host='35.227.41.202', port=6379, db=0, charset="utf-8", decode_responses=True)
 
 _ONE_DAY_IN_SECONDS = 60 * 60 * 24
 
