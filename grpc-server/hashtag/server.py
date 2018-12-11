@@ -43,6 +43,10 @@ class HashtagService(hashtag_pb2_grpc.HashtagsServicer):
 
     def getTweetSentiment(self, request, context):
         sentiment_key = '@score@' + request.hashtag
+
+        if not r.exists(sentiment_key):
+            return hashtag_pb2.TweetSentiment(sentiment="")
+
         sentiment = r.get(sentiment_key)
 
         if float(sentiment) < float(0):

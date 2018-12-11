@@ -14,8 +14,8 @@ def run():
         # stub.sendTweet(TweetRequest(tweet="I don't know what the fuck Im saying #neutral", tweet_id=2))
         # stub.sendTweet(TweetRequest(tweet="Shut up andrew #Andrew. I'm very fucking angry", tweet_id=3))
 
-        response = stub.getTweetSentiment(hashtag_pb2.TweetHashtagRequest(hashtag='#scalica'))
-        print(type(response.sentiment))
+        response = stub.getTweetsByHashtag(hashtag_pb2.TweetHashtagRequest(hashtag='#shit'))
+        print(response.tweets)
 
 if __name__ == '__main__':
     run()
