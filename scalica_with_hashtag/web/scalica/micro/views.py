@@ -81,16 +81,18 @@ def stream_hashtag_with_sentiment(request, hashtag):
     if hashtag[0] != '#':
       hashtag = '#' + hashtag
     tweet_ids = []
-    with grpc.insecure_channel('35.227.41.202:50051') as channel:
+    sentiment = None
+    with grpc.insecure_channel('35.185.58.180:50051') as channel:
       stub = HashtagsStub(channel)
       response = stub.getTweetsByHashtag(TweetHashtagRequest(hashtag=hashtag))
       tweet_ids = response.tweets
-      print tweet_ids
-      #sentiment = stub.getTweetSentiment(TweetHashtagRequest(hashtag=hashtag))
-      sentiment = "temp"
+      res = stub.getTweetSentiment(TweetHashtagRequest(hashtag=hashtag))
+      #sentiment = "temp"
+      print "the sentiment is: " + res.sentiment 
+
     # get all the tweets from datbase and render
     tweet_list = Post.objects.filter(id__in=tweet_ids) # may need to cast tweet_ids to python list
-    #tweet_list = ['hello', 'mir','is','testing','pagination','hope','this','works','and','my','fingers','crossed','tightly']
+    
     # pagination
     paginator = Paginator(tweet_list, 5)
     page = request.GET.get('page')
@@ -100,7 +102,8 @@ def stream_hashtag_with_sentiment(request, hashtag):
       tweets = paginator.page(1)
     except EmptyPage:
       tweets = paginator.get_page(paginator.num_pages)
-    return render(request, 'micro/hashtag_search_with_sentiment.html', {'posts':tweets, 'sentiment': sentiment, 'hashtag': hashtag})
+    print "the sentiment for "+ hashtag + " is  "+ res.sentiment  
+    return render(request, 'micro/hashtag_search_with_sentiment.html', {'posts': tweets, 'sentiment': res.sentiment, 'hashtag': hashtag})
 
 
 # Authenticated views
@@ -137,7 +140,7 @@ def post(request):
     # make an rpc call to send the tweet id and the text
     post_id = new_post.id
     text = new_post.text
-    channel = grpc.insecure_channel('35.227.41.202:50051')
+    channel = grpc.insecure_channel('35.185.58.180:50051')
     stub = HashtagsStub(channel)
     stub.sendTweet(TweetRequest(tweet=text, tweet_id=post_id))
     channel.close()    

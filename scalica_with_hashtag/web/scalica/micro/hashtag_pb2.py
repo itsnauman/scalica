@@ -19,36 +19,10 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\rhashtag.proto\"\x07\n\x05\x45mpty\"/\n\x0cTweetRequest\x12\r\n\x05tweet\x18\x01 \x01(\t\x12\x10\n\x08tweet_id\x18\x02 \x01(\x05\"&\n\x13TweetHashtagRequest\x12\x0f\n\x07hashtag\x18\x01 \x01(\t\"-\n\nTweetsList\x12\x0f\n\x07hashtag\x18\x01 \x01(\t\x12\x0e\n\x06tweets\x18\x02 \x03(\t\"v\n\x0eTweetSentiment\x12-\n\tsentiment\x18\x01 \x01(\x0e\x32\x1a.TweetSentiment.Sentiments\"5\n\nSentiments\x12\x0c\n\x08POSITIVE\x10\x00\x12\x0c\n\x08NEGATIVE\x10\x01\x12\x0b\n\x07NEUTRAL\x10\x02\x32\xa9\x01\n\x08Hashtags\x12$\n\tsendTweet\x12\r.TweetRequest\x1a\x06.Empty\"\x00\x12\x39\n\x12getTweetsByHashtag\x12\x14.TweetHashtagRequest\x1a\x0b.TweetsList\"\x00\x12<\n\x11getTweetSentiment\x12\x14.TweetHashtagRequest\x1a\x0f.TweetSentiment\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\rhashtag.proto\"\x07\n\x05\x45mpty\"/\n\x0cTweetRequest\x12\r\n\x05tweet\x18\x01 \x01(\t\x12\x10\n\x08tweet_id\x18\x02 \x01(\x05\"&\n\x13TweetHashtagRequest\x12\x0f\n\x07hashtag\x18\x01 \x01(\t\"-\n\nTweetsList\x12\x0f\n\x07hashtag\x18\x01 \x01(\t\x12\x0e\n\x06tweets\x18\x02 \x03(\t\"#\n\x0eTweetSentiment\x12\x11\n\tsentiment\x18\x01 \x01(\t2\xa9\x01\n\x08Hashtags\x12$\n\tsendTweet\x12\r.TweetRequest\x1a\x06.Empty\"\x00\x12\x39\n\x12getTweetsByHashtag\x12\x14.TweetHashtagRequest\x1a\x0b.TweetsList\"\x00\x12<\n\x11getTweetSentiment\x12\x14.TweetHashtagRequest\x1a\x0f.TweetSentiment\"\x00\x62\x06proto3')
 )
 
 
-
-_TWEETSENTIMENT_SENTIMENTS = _descriptor.EnumDescriptor(
-  name='Sentiments',
-  full_name='TweetSentiment.Sentiments',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='POSITIVE', index=0, number=0,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='NEGATIVE', index=1, number=1,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='NEUTRAL', index=2, number=2,
-      serialized_options=None,
-      type=None),
-  ],
-  containing_type=None,
-  serialized_options=None,
-  serialized_start=227,
-  serialized_end=280,
-)
-_sym_db.RegisterEnumDescriptor(_TWEETSENTIMENT_SENTIMENTS)
 
 
 _EMPTY = _descriptor.Descriptor(
@@ -191,8 +165,8 @@ _TWEETSENTIMENT = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='sentiment', full_name='TweetSentiment.sentiment', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -201,7 +175,6 @@ _TWEETSENTIMENT = _descriptor.Descriptor(
   ],
   nested_types=[],
   enum_types=[
-    _TWEETSENTIMENT_SENTIMENTS,
   ],
   serialized_options=None,
   is_extendable=False,
@@ -210,11 +183,9 @@ _TWEETSENTIMENT = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=162,
-  serialized_end=280,
+  serialized_end=197,
 )
 
-_TWEETSENTIMENT.fields_by_name['sentiment'].enum_type = _TWEETSENTIMENT_SENTIMENTS
-_TWEETSENTIMENT_SENTIMENTS.containing_type = _TWEETSENTIMENT
 DESCRIPTOR.message_types_by_name['Empty'] = _EMPTY
 DESCRIPTOR.message_types_by_name['TweetRequest'] = _TWEETREQUEST
 DESCRIPTOR.message_types_by_name['TweetHashtagRequest'] = _TWEETHASHTAGREQUEST
@@ -265,8 +236,8 @@ _HASHTAGS = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=283,
-  serialized_end=452,
+  serialized_start=200,
+  serialized_end=369,
   methods=[
   _descriptor.MethodDescriptor(
     name='sendTweet',

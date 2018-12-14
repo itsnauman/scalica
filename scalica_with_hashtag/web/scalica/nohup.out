@@ -1,0 +1,750 @@
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SHOW FULL TABLES; args=None
+DEBUG:django.db.backends:(0.004) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'd4fkrkps6fvaij4c8tull9zo1yuukiwe' AND `django_session`.`expire_date` > '2018-12-10 22:43:16'); args=('d4fkrkps6fvaij4c8tull9zo1yuukiwe', u'2018-12-10 22:43:16')
+DEBUG:django.db.backends:(0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`user_id` = 1 ORDER BY `micro_post`.`pub_date` DESC LIMIT 1; args=(1,)
+DEBUG:django.db.backends:(0.001) SELECT `micro_following`.`id`, `micro_following`.`follower_id`, `micro_following`.`followee_id`, `micro_following`.`follow_date` FROM `micro_following` WHERE `micro_following`.`follower_id` = 1; args=(1,)
+[10/Dec/2018 17:43:16] "GET /micro/ HTTP/1.1" 200 1288
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'd4fkrkps6fvaij4c8tull9zo1yuukiwe' AND `django_session`.`expire_date` > '2018-12-10 22:44:44'); args=('d4fkrkps6fvaij4c8tull9zo1yuukiwe', u'2018-12-10 22:44:44')
+DEBUG:django.db.backends:(0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 17:44:44] "GET /micro/search/scalica/ HTTP/1.1" 200 1342
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'd4fkrkps6fvaij4c8tull9zo1yuukiwe' AND `django_session`.`expire_date` > '2018-12-10 22:44:46'); args=('d4fkrkps6fvaij4c8tull9zo1yuukiwe', u'2018-12-10 22:44:46')
+DEBUG:django.db.backends:(0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5 OFFSET 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 17:44:46] "GET /micro/search/scalica/?page=2 HTTP/1.1" 200 1487
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'd4fkrkps6fvaij4c8tull9zo1yuukiwe' AND `django_session`.`expire_date` > '2018-12-10 22:44:49'); args=('d4fkrkps6fvaij4c8tull9zo1yuukiwe', u'2018-12-10 22:44:49')
+DEBUG:django.db.backends:(0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 17:44:49] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1342
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 17:44:59] "GET /micro/search/scalica/ HTTP/1.1" 200 1330
+[10/Dec/2018 17:45:01] "GET /static/micro/images/user.png HTTP/1.1" 200 12373
+[10/Dec/2018 17:45:01] "GET /static/micro/images/user.png HTTP/1.1" 200 12373
+[10/Dec/2018 17:45:10] "GET /static/micro/images/user.png HTTP/1.1" 200 12373
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 17:45:26] "GET /micro/search/scalica/?fbclid=IwAR2X_7soNuxSabOL-qqsgwbQig2XGNAltJalkiYzX_stWyMuQSj3fIyP-vM HTTP/1.1" 200 1330
+[10/Dec/2018 17:45:26] "GET /static/micro/images/user.png HTTP/1.1" 200 12373
+[10/Dec/2018 17:45:26] "GET /static/micro/style.css HTTP/1.1" 200 1176
+[10/Dec/2018 17:50:05] "GET /static/micro/images/user.png HTTP/1.1" 200 12373
+DEBUG:django.db.backends:(0.004) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.003) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.002) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 17:50:22] "GET /micro/search/scalica/ HTTP/1.1" 200 1330
+[10/Dec/2018 17:50:23] "GET /static/micro/style.css HTTP/1.1" 200 1176
+[10/Dec/2018 17:50:23] "GET /static/micro/images/user.png HTTP/1.1" 200 12373
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 17:54:05] "GET /micro/search/scalica/?fbclid=IwAR0x4yNRYLSdb3oKHN8WWTZMwzCGfH6AybaXBmL2ZaDWH5o-hfFOdNiB2io HTTP/1.1" 200 1330
+[10/Dec/2018 17:54:06] "GET /static/micro/style.css HTTP/1.1" 200 1176
+[10/Dec/2018 17:54:06] "GET /static/micro/images/user.png HTTP/1.1" 200 12373
+Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+[10/Dec/2018 17:54:07] "GET /favicon.ico HTTP/1.1" 404 2159
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5 OFFSET 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 17:54:12] "GET /micro/search/scalica/?page=2 HTTP/1.1" 200 1475
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 2 OFFSET 10; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 17:54:14] "GET /micro/search/scalica/?page=3 HTTP/1.1" 200 1231
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 17:57:31] "GET /micro/search/scalica/ HTTP/1.1" 200 1330
+[10/Dec/2018 17:57:31] "GET /static/micro/style.css HTTP/1.1" 200 1176
+[10/Dec/2018 17:57:31] "GET /static/micro/images/user.png HTTP/1.1" 200 12373
+Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+[10/Dec/2018 17:57:31] "GET /favicon.ico HTTP/1.1" 404 2159
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 17:57:38] "GET /micro/search/scalica/ HTTP/1.1" 200 1330
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 2 OFFSET 10; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 17:57:42] "GET /micro/search/scalica/?page=3 HTTP/1.1" 200 1231
+Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+[10/Dec/2018 17:57:42] "GET /favicon.ico HTTP/1.1" 404 2159
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5 OFFSET 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 17:57:43] "GET /micro/search/scalica/?page=2 HTTP/1.1" 200 1475
+Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+[10/Dec/2018 17:57:43] "GET /favicon.ico HTTP/1.1" 404 2159
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.000) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 2 OFFSET 10; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 17:57:45] "GET /micro/search/scalica/?page=3 HTTP/1.1" 200 1231
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 17:57:54] "GET /micro/search/scalica/ HTTP/1.1" 200 1330
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5 OFFSET 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 17:58:23] "GET /micro/search/scalica/?page=2 HTTP/1.1" 200 1475
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 17:58:24] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1330
+Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+[10/Dec/2018 17:58:24] "GET /favicon.ico HTTP/1.1" 404 2159
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5 OFFSET 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 17:58:25] "GET /micro/search/scalica/?page=2 HTTP/1.1" 200 1475
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 2 OFFSET 10; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 17:58:26] "GET /micro/search/scalica/?page=3 HTTP/1.1" 200 1231
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 2 OFFSET 10; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 17:58:28] "GET /micro/search/scalica/?page=3 HTTP/1.1" 200 1231
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 2 OFFSET 10; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 17:58:55] "GET /micro/search/scalica/?page=3 HTTP/1.1" 200 1231
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5 OFFSET 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 17:59:03] "GET /micro/search/scalica/?page=2 HTTP/1.1" 200 1475
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 17:59:04] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1330
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 17:59:06] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1330
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.000) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:00:22] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1330
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:00:23] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1330
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:00:23] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1330
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:00:23] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1330
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:00:24] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1330
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:00:24] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1330
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:00:25] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1330
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:05:23] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1330
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5 OFFSET 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:05:25] "GET /micro/search/scalica/?page=2 HTTP/1.1" 200 1475
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.000) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 2 OFFSET 10; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:05:25] "GET /micro/search/scalica/?page=3 HTTP/1.1" 200 1231
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5 OFFSET 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:05:28] "GET /micro/search/scalica/?page=2 HTTP/1.1" 200 1475
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:05:29] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1330
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 2 OFFSET 10; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:05:30] "GET /micro/search/scalica/?page=3 HTTP/1.1" 200 1231
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.000) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5 OFFSET 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:05:31] "GET /micro/search/scalica/?page=2 HTTP/1.1" 200 1475
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:05:32] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1330
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 2 OFFSET 10; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:05:33] "GET /micro/search/scalica/?page=3 HTTP/1.1" 200 1231
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:05:35] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1330
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5 OFFSET 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:05:43] "GET /micro/search/scalica/?page=2 HTTP/1.1" 200 1475
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.000) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 2 OFFSET 10; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:05:44] "GET /micro/search/scalica/?page=3 HTTP/1.1" 200 1231
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.000) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 2 OFFSET 10; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:05:46] "GET /micro/search/scalica/?page=3 HTTP/1.1" 200 1231
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:05:47] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1330
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.000) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 2 OFFSET 10; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:05:48] "GET /micro/search/scalica/?page=3 HTTP/1.1" 200 1231
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:05:52] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1330
+[10/Dec/2018 18:06:14] "GET /micro/login/ HTTP/1.1" 200 1179
+Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+[10/Dec/2018 18:06:14] "GET /favicon.ico HTTP/1.1" 404 2159
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:06:17] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1330
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:16:15] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1330
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:16:16] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1330
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:16:16] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1330
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:16:17] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1330
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 2 OFFSET 10; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:16:18] "GET /micro/search/scalica/?page=3 HTTP/1.1" 200 1231
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 2 OFFSET 10; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:16:20] "GET /micro/search/scalica/?page=3 HTTP/1.1" 200 1231
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5 OFFSET 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:16:21] "GET /micro/search/scalica/?page=2 HTTP/1.1" 200 1475
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:16:22] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1330
+DEBUG:django.db.backends:(0.002) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.002) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:16:23] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1330
+DEBUG:django.db.backends:(0.002) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:16:23] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1330
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 2 OFFSET 10; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:16:26] "GET /micro/search/scalica/?page=3 HTTP/1.1" 200 1231
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5 OFFSET 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:16:28] "GET /micro/search/scalica/?page=2 HTTP/1.1" 200 1475
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:16:29] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1330
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.000) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:16:30] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1330
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:16:49] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1330
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:18:49] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1330
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 2 OFFSET 10; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:18:52] "GET /micro/search/scalica/?page=3 HTTP/1.1" 200 1231
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:18:53] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1330
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:18:54] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1330
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:26:50] "GET /micro/search/scalica/ HTTP/1.1" 200 1335
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:27:15] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1335
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:27:16] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1335
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.000) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5 OFFSET 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:27:17] "GET /micro/search/scalica/?page=2 HTTP/1.1" 200 1480
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 2 OFFSET 10; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:27:18] "GET /micro/search/scalica/?page=3 HTTP/1.1" 200 1232
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 2 OFFSET 10; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:27:18] "GET /micro/search/scalica/?page=3 HTTP/1.1" 200 1232
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:27:20] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1335
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:27:21] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1335
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.000) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:27:29] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1335
+[10/Dec/2018 18:27:29] "GET /static/micro/style.css HTTP/1.1" 200 1176
+[10/Dec/2018 18:27:30] "GET /micro/ HTTP/1.1" 200 784
+Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+[10/Dec/2018 18:27:30] "GET /favicon.ico HTTP/1.1" 404 2159
+[10/Dec/2018 18:27:32] "GET /micro/ HTTP/1.1" 200 784
+[10/Dec/2018 18:27:38] "GET /micro/ HTTP/1.1" 200 784
+[10/Dec/2018 18:27:43] "GET /micro/register/ HTTP/1.1" 200 1370
+Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+[10/Dec/2018 18:27:43] "GET /favicon.ico HTTP/1.1" 404 2159
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SELECT (1) AS `a` FROM `auth_user` WHERE `auth_user`.`username` = 'andrii' LIMIT 1; args=(u'andrii',)
+Internal Server Error: /micro/register/
+Traceback (most recent call last):
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ma3599/scalica_hashtag/scalica_with_hashtag/web/scalica/micro/views.py", line 59, in register
+    new_user = form.save(commit=True)
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/django/contrib/auth/forms.py", line 96, in save
+    user = super(UserCreationForm, self).save(commit=False)
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/django/forms/models.py", line 446, in save
+    'created' if self.instance._state.adding else 'changed',
+ValueError: The User could not be created because the data didn't validate.
+ERROR:django.request:Internal Server Error: /micro/register/
+Traceback (most recent call last):
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ma3599/scalica_hashtag/scalica_with_hashtag/web/scalica/micro/views.py", line 59, in register
+    new_user = form.save(commit=True)
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/django/contrib/auth/forms.py", line 96, in save
+    user = super(UserCreationForm, self).save(commit=False)
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/django/forms/models.py", line 446, in save
+    'created' if self.instance._state.adding else 'changed',
+ValueError: The User could not be created because the data didn't validate.
+[10/Dec/2018 18:28:08] "POST /micro/register/ HTTP/1.1" 500 72120
+[10/Dec/2018 18:28:12] "GET /micro/register/ HTTP/1.1" 200 1370
+[10/Dec/2018 18:28:13] "GET /micro/register/ HTTP/1.1" 200 1370
+[10/Dec/2018 18:28:16] "GET /micro/ HTTP/1.1" 200 784
+[10/Dec/2018 18:28:18] "GET /micro/login/ HTTP/1.1" 200 1179
+[10/Dec/2018 18:28:21] "GET /micro/register/ HTTP/1.1" 200 1370
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:28:26] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1335
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:28:26] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1335
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:28:29] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1335
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 2 OFFSET 10; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:28:30] "GET /micro/search/scalica/?page=3 HTTP/1.1" 200 1232
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:28:32] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1335
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:28:32] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1335
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:28:34] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1335
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:30:08] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1335
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 18:50:46] "GET /micro/search/scalica/?fbclid=IwAR0x4yNRYLSdb3oKHN8WWTZMwzCGfH6AybaXBmL2ZaDWH5o-hfFOdNiB2io HTTP/1.1" 200 1335
+[10/Dec/2018 18:50:54] "GET /micro/ HTTP/1.1" 200 784
+Not Found: /micro/search
+WARNING:django.request:Not Found: /micro/search
+[10/Dec/2018 18:51:00] "GET /micro/search HTTP/1.1" 404 5370
+Not Found: /
+WARNING:django.request:Not Found: /
+[10/Dec/2018 18:56:33] "GET / HTTP/1.1" 404 2126
+Not Found: /www.yahoo.com:443
+WARNING:django.request:Not Found: /www.yahoo.com:443
+[10/Dec/2018 19:46:03] "CONNECT www.yahoo.com:443 HTTP/1.0" 404 1692
+[10/Dec/2018 19:46:13] code 400, message Bad request syntax ('\x04\x01\x01\xbb\x00\x00\x00\x01\x00www.yahoo.com\x00')
+[10/Dec/2018 19:46:13] 
+[10/Dec/2018 20:28:35] "GET /static/micro/style.css HTTP/1.1" 304 0
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 20:28:35] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1335
+[10/Dec/2018 20:28:35] "GET /static/micro/style.css HTTP/1.1" 304 0
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 2 OFFSET 10; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 20:28:38] "GET /micro/search/scalica/?page=3 HTTP/1.1" 200 1229
+DEBUG:django.db.backends:(0.001) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SELECT COUNT(*) AS `__count` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65); args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+DEBUG:django.db.backends:(0.001) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`id` IN (52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65) LIMIT 5; args=(52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 65)
+[10/Dec/2018 20:28:41] "GET /micro/search/scalica/?page=1 HTTP/1.1" 200 1335
+[10/Dec/2018 21:14:20] "GET /micro/ HTTP/1.1" 200 784
+[10/Dec/2018 21:14:20] "GET /static/micro/style.css HTTP/1.1" 200 1176
+Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+[10/Dec/2018 21:14:21] "GET /favicon.ico HTTP/1.1" 404 2159
+[10/Dec/2018 21:14:23] "GET /micro/login/ HTTP/1.1" 200 1179
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`username` = 'mir'; args=(u'mir',)
+DEBUG:django.db.backends:(0.001) SELECT (1) AS `a` FROM `django_session` WHERE `django_session`.`session_key` = 'z7o08i94pleuoo03vw83k7zbzjimxbwz' LIMIT 1; args=(u'z7o08i94pleuoo03vw83k7zbzjimxbwz',)
+DEBUG:django.db.backends:(0.001) INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES ('z7o08i94pleuoo03vw83k7zbzjimxbwz', 'MzM2YTA1OTQ3ZGI0ZjI2NzhlNjI2YjQ4ZGYwYjlhMDgyMzY0M2NkNTp7fQ==', '2018-12-25 02:14:28'); args=(u'z7o08i94pleuoo03vw83k7zbzjimxbwz', u'MzM2YTA1OTQ3ZGI0ZjI2NzhlNjI2YjQ4ZGYwYjlhMDgyMzY0M2NkNTp7fQ==', u'2018-12-25 02:14:28')
+DEBUG:django.db.backends:(0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE `django_session`.`session_key` = 'z7o08i94pleuoo03vw83k7zbzjimxbwz'; args=(u'z7o08i94pleuoo03vw83k7zbzjimxbwz',)
+DEBUG:django.db.backends:(0.001) DELETE FROM `django_session` WHERE `django_session`.`session_key` IN ('z7o08i94pleuoo03vw83k7zbzjimxbwz'); args=(u'z7o08i94pleuoo03vw83k7zbzjimxbwz',)
+DEBUG:django.db.backends:(0.001) UPDATE `auth_user` SET `last_login` = '2018-12-11 02:14:28' WHERE `auth_user`.`id` = 1; args=(u'2018-12-11 02:14:28', 1)
+DEBUG:django.db.backends:(0.001) UPDATE `django_session` SET `session_data` = 'N2Q2ZTczYmYzZTUxYjRiYmUyNTY3ZDYyODU0OTk4OGIzODJjOTViZjp7Il9hdXRoX3VzZXJfaGFzaCI6ImMxM2JlNjk0YWQ3ZGYzYWZmZjAyMzZjNTMxNjBlZDE0OWE1NWM0NmYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=', `expire_date` = '2018-12-25 02:14:28' WHERE `django_session`.`session_key` = 'z7o08i94pleuoo03vw83k7zbzjimxbwz'; args=(u'N2Q2ZTczYmYzZTUxYjRiYmUyNTY3ZDYyODU0OTk4OGIzODJjOTViZjp7Il9hdXRoX3VzZXJfaGFzaCI6ImMxM2JlNjk0YWQ3ZGYzYWZmZjAyMzZjNTMxNjBlZDE0OWE1NWM0NmYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=', u'2018-12-25 02:14:28', u'z7o08i94pleuoo03vw83k7zbzjimxbwz')
+DEBUG:django.db.backends:(0.001) INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES ('z7o08i94pleuoo03vw83k7zbzjimxbwz', 'N2Q2ZTczYmYzZTUxYjRiYmUyNTY3ZDYyODU0OTk4OGIzODJjOTViZjp7Il9hdXRoX3VzZXJfaGFzaCI6ImMxM2JlNjk0YWQ3ZGYzYWZmZjAyMzZjNTMxNjBlZDE0OWE1NWM0NmYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=', '2018-12-25 02:14:28'); args=(u'z7o08i94pleuoo03vw83k7zbzjimxbwz', u'N2Q2ZTczYmYzZTUxYjRiYmUyNTY3ZDYyODU0OTk4OGIzODJjOTViZjp7Il9hdXRoX3VzZXJfaGFzaCI6ImMxM2JlNjk0YWQ3ZGYzYWZmZjAyMzZjNTMxNjBlZDE0OWE1NWM0NmYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=', u'2018-12-25 02:14:28')
+[10/Dec/2018 21:14:28] "POST /micro/login/ HTTP/1.1" 302 0
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG:django.db.backends:(0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'z7o08i94pleuoo03vw83k7zbzjimxbwz' AND `django_session`.`expire_date` > '2018-12-11 02:14:28'); args=('z7o08i94pleuoo03vw83k7zbzjimxbwz', u'2018-12-11 02:14:28')
+DEBUG:django.db.backends:(0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+DEBUG:django.db.backends:(0.000) SELECT `micro_post`.`id`, `micro_post`.`user_id`, `micro_post`.`text`, `micro_post`.`pub_date` FROM `micro_post` WHERE `micro_post`.`user_id` = 1 ORDER BY `micro_post`.`pub_date` DESC LIMIT 1; args=(1,)
+DEBUG:django.db.backends:(0.000) SELECT `micro_following`.`id`, `micro_following`.`follower_id`, `micro_following`.`followee_id`, `micro_following`.`follow_date` FROM `micro_following` WHERE `micro_following`.`follower_id` = 1; args=(1,)
+[10/Dec/2018 21:14:28] "GET /micro/home/ HTTP/1.1" 200 1288
+[10/Dec/2018 21:14:28] "GET /static/micro/images/user.png HTTP/1.1" 200 12373
+[10/Dec/2018 21:14:43] "GET /micro/search/scalica HTTP/1.1" 301 0
+Internal Server Error: /micro/search/scalica/
+Traceback (most recent call last):
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ma3599/scalica_hashtag/scalica_with_hashtag/web/scalica/micro/views.py", line 89, in stream_hashtag_with_sentiment
+    res = stub.getTweetSentiment(TweetHashtagRequest(hashtag=hashtag))
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/grpc/_channel.py", line 533, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/grpc/_channel.py", line 467, in _end_unary_response_blocking
+    raise _Rendezvous(state, None, None, deadline)
+_Rendezvous: <_Rendezvous of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "Exception calling application: float() argument must be a string or a number, not 'NoneType'"
+	debug_error_string = "{"created":"@1544494483.847035377","description":"Error received from peer","file":"src/core/lib/surface/call.cc","file_line":1017,"grpc_message":"Exception calling application: float() argument must be a string or a number, not 'NoneType'","grpc_status":2}"
+>
+ERROR:django.request:Internal Server Error: /micro/search/scalica/
+Traceback (most recent call last):
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ma3599/scalica_hashtag/scalica_with_hashtag/web/scalica/micro/views.py", line 89, in stream_hashtag_with_sentiment
+    res = stub.getTweetSentiment(TweetHashtagRequest(hashtag=hashtag))
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/grpc/_channel.py", line 533, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/grpc/_channel.py", line 467, in _end_unary_response_blocking
+    raise _Rendezvous(state, None, None, deadline)
+_Rendezvous: <_Rendezvous of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "Exception calling application: float() argument must be a string or a number, not 'NoneType'"
+	debug_error_string = "{"created":"@1544494483.847035377","description":"Error received from peer","file":"src/core/lib/surface/call.cc","file_line":1017,"grpc_message":"Exception calling application: float() argument must be a string or a number, not 'NoneType'","grpc_status":2}"
+>
+[10/Dec/2018 21:14:43] "GET /micro/search/scalica/ HTTP/1.1" 500 76849
+- Broken pipe from ('172.56.34.101', 30843)
+Internal Server Error: /micro/search/scalica/
+Traceback (most recent call last):
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ma3599/scalica_hashtag/scalica_with_hashtag/web/scalica/micro/views.py", line 89, in stream_hashtag_with_sentiment
+    res = stub.getTweetSentiment(TweetHashtagRequest(hashtag=hashtag))
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/grpc/_channel.py", line 533, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/grpc/_channel.py", line 467, in _end_unary_response_blocking
+    raise _Rendezvous(state, None, None, deadline)
+_Rendezvous: <_Rendezvous of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "Exception calling application: float() argument must be a string or a number, not 'NoneType'"
+	debug_error_string = "{"created":"@1544494484.161003274","description":"Error received from peer","file":"src/core/lib/surface/call.cc","file_line":1017,"grpc_message":"Exception calling application: float() argument must be a string or a number, not 'NoneType'","grpc_status":2}"
+>
+ERROR:django.request:Internal Server Error: /micro/search/scalica/
+Traceback (most recent call last):
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ma3599/scalica_hashtag/scalica_with_hashtag/web/scalica/micro/views.py", line 89, in stream_hashtag_with_sentiment
+    res = stub.getTweetSentiment(TweetHashtagRequest(hashtag=hashtag))
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/grpc/_channel.py", line 533, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/grpc/_channel.py", line 467, in _end_unary_response_blocking
+    raise _Rendezvous(state, None, None, deadline)
+_Rendezvous: <_Rendezvous of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "Exception calling application: float() argument must be a string or a number, not 'NoneType'"
+	debug_error_string = "{"created":"@1544494484.161003274","description":"Error received from peer","file":"src/core/lib/surface/call.cc","file_line":1017,"grpc_message":"Exception calling application: float() argument must be a string or a number, not 'NoneType'","grpc_status":2}"
+>
+[10/Dec/2018 21:14:44] "GET /micro/search/scalica/ HTTP/1.1" 500 76721
+Internal Server Error: /micro/search/scalica/
+Traceback (most recent call last):
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ma3599/scalica_hashtag/scalica_with_hashtag/web/scalica/micro/views.py", line 89, in stream_hashtag_with_sentiment
+    res = stub.getTweetSentiment(TweetHashtagRequest(hashtag=hashtag))
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/grpc/_channel.py", line 533, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/grpc/_channel.py", line 467, in _end_unary_response_blocking
+    raise _Rendezvous(state, None, None, deadline)
+_Rendezvous: <_Rendezvous of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "Exception calling application: float() argument must be a string or a number, not 'NoneType'"
+	debug_error_string = "{"created":"@1544495372.624080030","description":"Error received from peer","file":"src/core/lib/surface/call.cc","file_line":1017,"grpc_message":"Exception calling application: float() argument must be a string or a number, not 'NoneType'","grpc_status":2}"
+>
+ERROR:django.request:Internal Server Error: /micro/search/scalica/
+Traceback (most recent call last):
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ma3599/scalica_hashtag/scalica_with_hashtag/web/scalica/micro/views.py", line 89, in stream_hashtag_with_sentiment
+    res = stub.getTweetSentiment(TweetHashtagRequest(hashtag=hashtag))
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/grpc/_channel.py", line 533, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/grpc/_channel.py", line 467, in _end_unary_response_blocking
+    raise _Rendezvous(state, None, None, deadline)
+_Rendezvous: <_Rendezvous of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "Exception calling application: float() argument must be a string or a number, not 'NoneType'"
+	debug_error_string = "{"created":"@1544495372.624080030","description":"Error received from peer","file":"src/core/lib/surface/call.cc","file_line":1017,"grpc_message":"Exception calling application: float() argument must be a string or a number, not 'NoneType'","grpc_status":2}"
+>
+[10/Dec/2018 21:29:32] "GET /micro/search/scalica/ HTTP/1.1" 500 75610
+Internal Server Error: /micro/search/scalica/
+Traceback (most recent call last):
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ma3599/scalica_hashtag/scalica_with_hashtag/web/scalica/micro/views.py", line 89, in stream_hashtag_with_sentiment
+    res = stub.getTweetSentiment(TweetHashtagRequest(hashtag=hashtag))
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/grpc/_channel.py", line 533, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/grpc/_channel.py", line 467, in _end_unary_response_blocking
+    raise _Rendezvous(state, None, None, deadline)
+_Rendezvous: <_Rendezvous of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "Exception calling application: float() argument must be a string or a number, not 'NoneType'"
+	debug_error_string = "{"created":"@1544495532.824062594","description":"Error received from peer","file":"src/core/lib/surface/call.cc","file_line":1017,"grpc_message":"Exception calling application: float() argument must be a string or a number, not 'NoneType'","grpc_status":2}"
+>
+ERROR:django.request:Internal Server Error: /micro/search/scalica/
+Traceback (most recent call last):
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ma3599/scalica_hashtag/scalica_with_hashtag/web/scalica/micro/views.py", line 89, in stream_hashtag_with_sentiment
+    res = stub.getTweetSentiment(TweetHashtagRequest(hashtag=hashtag))
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/grpc/_channel.py", line 533, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/grpc/_channel.py", line 467, in _end_unary_response_blocking
+    raise _Rendezvous(state, None, None, deadline)
+_Rendezvous: <_Rendezvous of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "Exception calling application: float() argument must be a string or a number, not 'NoneType'"
+	debug_error_string = "{"created":"@1544495532.824062594","description":"Error received from peer","file":"src/core/lib/surface/call.cc","file_line":1017,"grpc_message":"Exception calling application: float() argument must be a string or a number, not 'NoneType'","grpc_status":2}"
+>
+[10/Dec/2018 21:32:12] "GET /micro/search/scalica/ HTTP/1.1" 500 76850
+Internal Server Error: /micro/search/scalica/
+Traceback (most recent call last):
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ma3599/scalica_hashtag/scalica_with_hashtag/web/scalica/micro/views.py", line 89, in stream_hashtag_with_sentiment
+    res = stub.getTweetSentiment(TweetHashtagRequest(hashtag=hashtag))
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/grpc/_channel.py", line 533, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/grpc/_channel.py", line 467, in _end_unary_response_blocking
+    raise _Rendezvous(state, None, None, deadline)
+_Rendezvous: <_Rendezvous of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "Exception calling application: float() argument must be a string or a number, not 'NoneType'"
+	debug_error_string = "{"created":"@1544495533.636957051","description":"Error received from peer","file":"src/core/lib/surface/call.cc","file_line":1017,"grpc_message":"Exception calling application: float() argument must be a string or a number, not 'NoneType'","grpc_status":2}"
+>
+ERROR:django.request:Internal Server Error: /micro/search/scalica/
+Traceback (most recent call last):
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ma3599/scalica_hashtag/scalica_with_hashtag/web/scalica/micro/views.py", line 89, in stream_hashtag_with_sentiment
+    res = stub.getTweetSentiment(TweetHashtagRequest(hashtag=hashtag))
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/grpc/_channel.py", line 533, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/ma3599/scalica_hashtag/scalica/env/local/lib/python2.7/site-packages/grpc/_channel.py", line 467, in _end_unary_response_blocking
+    raise _Rendezvous(state, None, None, deadline)
+_Rendezvous: <_Rendezvous of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "Exception calling application: float() argument must be a string or a number, not 'NoneType'"
+	debug_error_string = "{"created":"@1544495533.636957051","description":"Error received from peer","file":"src/core/lib/surface/call.cc","file_line":1017,"grpc_message":"Exception calling application: float() argument must be a string or a number, not 'NoneType'","grpc_status":2}"
+>
+[10/Dec/2018 21:32:13] "GET /micro/search/scalica/ HTTP/1.1" 500 76722

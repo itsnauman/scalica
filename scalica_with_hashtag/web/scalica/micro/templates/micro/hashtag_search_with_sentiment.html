@@ -15,7 +15,11 @@
 
 
 {% block content %}
+{% if sentiment %}
 <h2>The sentiment for the hashtag {{ hashtag }} is: {{ sentiment }}</h2>
+{% else %}
+<h2>The sentiment for {{ hashtag }} is not available yet.</h2>
+{% endif %}
 {% for post in posts %}
   <li>
     {{ post.text }} ({{ post.pub_date|naturaltime }})
