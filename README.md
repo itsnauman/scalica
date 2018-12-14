@@ -5,7 +5,7 @@ To accommodate the scalability requirement of the project we propose the followi
 
 # Architecture
 
-![Architecture Diagram](https://github.com/itsnauman/scalica_hashtag/documentation/architecture.jpg)
+![Architecture Diagram](https://github.com/itsnauman/scalica_hashtag/blob/master/documentation/architecture.jpg)
 
 1. First, we have the node hosting the Application Server - running the Scalica web application. This is the server to which the client connects, written in Django. We add an API endpoint in Scalica for clients to connect to in order to view a stream of posts containing the particular hashtag.
 
@@ -38,10 +38,3 @@ the gRPC server makes a remote procedure call to the Redis datastore node (node 
 The Scalica App server receives the id’s of the posts for the stream that the user has requested and fetches the plain text of the posts (by their id’s) from the MySQL database via a remote procedure call. After receiving the posts, the Scalica server adds the sentiment received from the gRPC server from the previous step and sends it to render on the front-end UI.
 →
 The page is now populated with a stream of posts that contain the searched hashtag, as well as the sentiment for this hashtag that is displayed as ‘negative’ or ‘positive’ for the user to see.
-
-
-# Team:
-Abrar: MapReduce Spark job for sentiment analysis
-Andrew: Deployment, glue of application and documentation
-Nauman: gRPC server, Redis and integration with other services
-Mir: Django Frontend/Backend, remote mysql and integration with other services
